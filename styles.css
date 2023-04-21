@@ -49,6 +49,11 @@ main{
     
 }
 
+#disclaimer {
+
+    color:aqua;
+}
+
 div{
     border: 1px solid #ffffff;
     height: 400px;
