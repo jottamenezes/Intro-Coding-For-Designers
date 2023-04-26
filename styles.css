@@ -38,26 +38,130 @@ body{
     height: 100vh;
     color: #ffffff;
     background: #000000;
+    margin: 0;
 }
 header{
     padding: 1.5em;
     position: fixed;
     width: 50%;
+    height: 75vh;
 }
 
-main{
+
+#hero {
     
+ 
+    height: 70%;
+    /* left: 70%; 
+    top: 10%;
+    opacity: 100%; */
 }
 
 #disclaimer {
 
-    color:aqua;
+    color:#d73f28;
+    font-family: Neue Machina Ultralight;
+    font-size:0.75em;
+    margin: auto; 
+    padding: 8px 16px 16px;
 }
 
+main{
+    
+    
+}
+
+
+
 div{
+    
     border: 1px solid #ffffff;
     height: 400px;
     padding: 3em;
+    position: relative;
+
+    transition: .4s ease-in-out;
+ 
+}
+
+div:hover .content {
+    filter: blur(2px);
+    transition: .4s ease-in-out;
+}
+
+
+div:hover .locked {
+    transition: .4s ease-in-out;
+
+    opacity: 85%;
+    filter: blur(0px);
+    border: 10px solid #d73f28; 
+   
+
+}
+
+div:hover .locked img {
+    /* transition: .4s ease-in-out; */
+
+    position: relative;
+    
+    top: -18%;
+    opacity: 1;
+   
+}
+
+div:hover .locked h4 {
+    bottom: 0;
+    opacity: 1;
+}
+.content{
+    border: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+}
+
+
+.locked {
+    overflow: hidden;
+
+    box-sizing: border-box;
+    position: absolute;
+    filter: blur(0px);
+  
+    width: 100%;
+    height: 100%;
+
+
+    opacity: 0%;
+
+    padding: 0;
+    top: 0;
+    left: 0;
+    background-color: #13132B;
+
+}
+
+.locked img {
+    transition: .4s ease-in-out;
+    text-align: center;
+    position: relative;
+    top: 0%;
+    width: 100%;
+ 
+}
+
+.locked h4 {
+    transition: .4s ease-in-out;
+
+    margin: 10px;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: #d73f28;
+    position: absolute;
+    bottom:-30px;
+    opacity: 0;
 }
 
 section{
@@ -65,6 +169,7 @@ section{
     width: 50%;
     right: 0px;
 }
+
 ul{
     margin: 0%;
     padding: 0%;
@@ -73,12 +178,29 @@ li{
     list-style: none;
 }
 
+h1 {
+    line-height: 120%;
+
+ 
+    margin: 0;
+
+}
+
+p {
+    
+   margin: auto;
+   padding: 12px 0 24px;
+
+    color:aliceblue;
+}
+
+
 a{
-    color: #ffffff;
+    color: #d73f28;
 }
 
 a:hover{
-    color: aqua;
+    color:bisque;
 }
 
 #info-container{
