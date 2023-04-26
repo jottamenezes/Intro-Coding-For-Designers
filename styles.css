@@ -103,15 +103,19 @@ div:hover .locked {
 div:hover .locked img {
     /* transition: .4s ease-in-out; */
 
+  
+
     position: relative;
+
     
-    top: -18%;
+    
+    bottom: -2%;
     opacity: 1;
    
 }
 
 div:hover .locked h4 {
-    bottom: 0;
+    bottom: 40px;
     opacity: 1;
 }
 .content{
@@ -131,8 +135,6 @@ div:hover .locked h4 {
   
     width: 100%;
     height: 100%;
-
-
     opacity: 0%;
 
     padding: 0;
@@ -143,11 +145,20 @@ div:hover .locked h4 {
 }
 
 .locked img {
+
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     transition: .4s ease-in-out;
-    text-align: center;
+
+    
+
     position: relative;
-    top: 0%;
-    width: 100%;
+    bottom: 4%;
+
+    height: 90%;
  
 }
 
@@ -155,7 +166,7 @@ div:hover .locked h4 {
     transition: .4s ease-in-out;
 
     margin: 10px;
-    padding: 30px;
+    padding: 30px 70px;
     text-align: center;
     font-size: 30px;
     color: #d73f28;
