@@ -45,42 +45,68 @@ section{
     margin-top: 5%
 }
 p{
-    padding-top: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    /* padding-top: 30px; */
+    font-family: helvetica, sans-serif;
+    font-weight: lighter;
     width: 70%;
     margin: auto;
     text-align: justify;
+    line-height: 160%;
+    padding: 10px 0 20px;
+}
+
+p:last-child {
+ 
+    padding-top: 0px;
+    padding-bottom: 50px;
 }
 
 h1{
     padding-top: 10%; 
-    font-size: 5rem
+    font-size: 5rem;
+    margin: 24px;
+ 
 }
 
 h2{
-    font-size: 3rem
+    font-size: 3rem;
+    margin: 30px 0 10px;
 }
 
 h3{
     padding-top: 2.5%; 
-    font-size: 2rem
+    font-size: 2rem;
 }
 ul{
     font-family: Arial, Helvetica, sans-serif;
+    font-family: Neue Machina Regular;
+    font-size:1em;
     width: 70%;
     margin: auto;
     text-align: left;
+    padding-bottom: 20px;
+
 }
 li{
     list-style:circle;
 }
 
+#disclaimer {
+
+    color:#d73f28;
+    font-family: Neue Machina Ultralight;
+    font-size:1.25em;
+    margin: auto; 
+    padding: 8px 16px 16px;
+}
+
+
 a{
-    color: #ffffff;
+    color: #d73f28;
 }
 
 a:hover{
-    color: aqua;
+    color:bisque;
 }
 
 @media (max-width: 700px){
