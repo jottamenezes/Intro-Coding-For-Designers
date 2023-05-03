@@ -27,12 +27,13 @@
         width: 60%;
         margin: auto;
     }
-    a {
-        color: aliceblue;
-    }
-    a:visited {
-        color: aliceblue;
-    }
+    a{
+    color: #d73f28;
+}
+
+a:hover{
+    color:bisque;
+}
 
     h1{
         font-family: 'Neue Machina Regular', monospace;
@@ -41,6 +42,17 @@
     .portal{
         height: 100%;
     }
+
+    #disclaimer {
+
+color:#d73f28;
+font-family: Neue Machina Ultralight;
+font-style: italic;
+font-size:2em;
+margin: auto; 
+padding: 8px 16px 0px;
+}
+
 </style>
 
 <body>
@@ -54,15 +66,17 @@
         <div class="portal" style="font-size: 1.5rem;">
             <p style="padding: 0px 0px 100px 0px;">html is like building the frame and foundation of a house</p>
             <p style="text-align: right; padding: 200px 0px 200px 0px;">css is like painting and decorating each room of your home</p>
-            <p style="padding: 100px 0px 100px 0px;"><a
-                    href="https://docs.google.com/presentation/d/1dPRQHh7Te5FgnYmmANLatVeUbZtyE8iMJzZl42JFR04/edit?usp=sharing">if the internet was a living environment, what do you want it to look like?</a></p>
+            <p id="disclaimer" style="padding: 100px 0px 100px 0px;">If the internet was a living environment, what do you want it to look like?</p>
         </div>
         <!-- These slides are taken from Laurel Schwulst's video: https://www.youtube.com/watch?v=BUZIaTHm_oE -->
 
 
         <!-- This is a block of CSS has 3 sets of rules. Lets look at one rule blown up -->
-        <div class="portal" style="font-size: 1.5rem;">
-            <img src="images/css_01.png" width="100%">
+        <div class="portal" style="font-size: 1.5rem; padding: 40px 0;">
+            <img src="images/css_01-v0.png" width="100%">
+            <img style="padding: 0 0 40px; display: block;" src="images/css_01.png" width="100%">
+
+
         </div>
         <!-- Each rule has 2 parts, a selector and a declaration block. You should always use curly braces to open and close your declaration block. Each line of code makes up a declaration block and each declaration it is made up of a property, followed by a colon, and then a value, followed by a semi colon-->
         <div class="portal" style="font-size: 1.5rem;">
@@ -159,7 +173,7 @@
         </div>
 
         <div class="portal" style="font-size: 1.5rem;">
-            <h1>CSS Article Exercise</h1>
+            <h1 id="exerciseCSS">CSS Article Exercise</h1>
             <h2>Part 1 - HTML</h2>
             <p>Choose and Interview or Article <a href="https://thecreativeindependent.com/people/">here</a> ideally one with multiple levels of hierarchy and images.</p>
             <p>Translate this article into HTMl. Focus on hierarchy and using the most specific elements to organize content. If the article did not originally have images, add a few relevant images throughout. </p>

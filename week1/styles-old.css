@@ -29,7 +29,6 @@
 }
 
 
-
 body{
     font-family: 'Neue Machina Regular', monospace;
     font-size: 1.5em;
@@ -55,8 +54,6 @@ section{
     text-align: center;
     margin-top: 5%
 }
-
-
 p{
     /* padding-top: 30px; */
     font-family: helvetica, sans-serif;
@@ -79,19 +76,14 @@ p{
 
 
 h1{
-    margin: 80px 20px 40px;
+    margin: 0;
     padding-top: 10%; 
-   
-    font-size: 5rem;
-    line-height: 100%;
+    font-size: 5rem
 }
 
 h2{
-   margin: 80px 20ps 40px;
-   padding: 0 20px;
+    padding-top: 10%; 
     font-size: 3rem;
-    line-height: 120%;
-
 }
 
 h3{
@@ -121,15 +113,6 @@ a{
 
 a:hover{
     color:bisque;
-}
-
-#disclaimer {
-
-    color:#d73f28;
-    font-family: Neue Machina Ultralight;
-    font-size:1em;
-    margin: auto; 
-    padding: 8px 16px 0px;
 }
 
 
