@@ -1,216 +1,542 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Intro to Zines</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/dsr1mvb.css"><link rel="stylesheet" href="https://use.typekit.net/dsr1mvb.css">
-
-</head>
-<style>
-      @font-face {
-        font-family: "Neue Machina Regular";
-        src: url("../fonts/NeueMachina-Regular.woff2") format("woff2"),
-            url("../fonts/NeueMachina-Regular.woff") format("woff");
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/dsr1mvb.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/dsr1mvb.css" />
+  </head>
+  <style>
+    @font-face {
+      font-family: "Neue Machina Regular";
+      src: url("../fonts/NeueMachina-Regular.woff2") format("woff2"),
+        url("../fonts/NeueMachina-Regular.woff") format("woff");
     }
 
     body {
-        background-color: black;
-        font-family: Arial, Helvetica, sans-serif;
-        color: aliceblue;
-        font-size: 1.5rem;
+      background-color: black;
+      font-family: Arial, Helvetica, sans-serif;
+      color: aliceblue;
+      font-size: 1.5rem;
+
+      overflow-x: hidden; /* Hide horizontal scrollbar */
+      overflow-y: auto; /* Allow vertical scrollbar */
     }
 
-    p{
-        font-size: 1.5rem;
-    /* padding-top: 30px; */
-    font-family: helvetica, sans-serif;
-    font-weight: lighter;
- 
-    width: 90%;
-    margin: auto;
-    text-align: justify;
-    line-height: 140%;
-    padding: 10px 0 20px;
-}
+    .animatedBG {
+      background-color: #1abc9c;
+      animation-name: gradient;
+      animation-duration: 15s;
+      animation-iteration-count: infinite;
+
+
+    }
+
+    @keyframes gradient {
+      0% {
+        background-image: linear-gradient(to right, #1abc9c, #2ecc71);
+      }
+      50% {
+        background-image: linear-gradient(to right, #2ecc71, #3498db);
+      }
+      100% {
+        background-image: linear-gradient(to right, #3498db, #9b59b6);
+      }
+    }
+    
+
+    p {
+      font-size: 1.5rem;
+      /* padding-top: 30px; */
+      font-family: helvetica, sans-serif;
+      font-weight: lighter;
+
+      width: 90%;
+      margin: auto;
+      text-align: justify;
+      line-height: 140%;
+      padding: 10px 0 20px;
+    }
 
     section {
-        width: 60%;
-        margin: auto;
+      width: 60%;
+      margin: auto;
     }
-    a{
-    color: #d73f28;
-}
-
-a:hover{
-    color:bisque;
-}
-
-    h1{
-        font-family: 'Neue Machina Regular', monospace;
+    a {
+      color: #d73f28;
     }
 
-    .portal{
-        height: 100%;
+    a:hover {
+      color: bisque;
+    }
+
+    .clickable {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+      transform: scale(0.9);
+      filter: saturate(10%);
+    }
+
+    .clickable:hover {
+      transform: scale(1);
+      filter: saturate(150%);
+    }
+    h1 {
+      font-family: "Neue Machina Regular", monospace;
+    }
+
+    .portal {
+      height: 100%;
     }
 
     #disclaimer {
+      color: #d73f28;
+      font-family: Neue Machina Ultralight;
+      font-style: normal;
+      font-size: 1em;
+      margin: auto;
+      padding: 8px 16px 0px;
+    }
 
-color:#d73f28;
-font-family: Neue Machina Ultralight;
-font-style:normal;
-font-size:1em;
-margin: auto; 
-padding: 8px 16px 0px;
-}
+    .text-experiment {
+      color: #aebf3f;
+      font-family: "alta-california", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      text-align: left;
+      font-size: 5.5em;
+      position: relative;
+      width: 200%;
+      left: 0px;
+      top: -120px;
+      z-index: -1;
+    }
 
-
-.text-experiment {
-    color: rgb(43, 43, 231);
-    font-family: "alta-california", sans-serif;
-font-weight: 400;
-font-style: normal;
-text-align: left;
-font-size: 5.5em;
-position:relative;
-left: 0px;
-top:-120px;
-z-index: -1;
-    
-}
-
-#title {
-    color: #d73f28;
-    padding: 0 30px;
-    font-style: italic;
-    background-color: black;
-    display: inline;
-    opacity: 100%;
-}
-
-
-</style>
-       <!-- WE CAN USE THIS IN SOME Part for text callout  -->
-        <!-- <h1 id="title">Independent, Bold, Experimental</h1>
-        <p class="text-experiment">What is it about??</p>  -->
-
-<body>
- 
-
-    <section>
-        <div class="" style="padding-top:200px;">
-            <h1>Zine Aesthetics and the Experimental Web</h1>
-            <p>Zines often use creative layouts, unusual typography, and expressive illustrations that can inspire designers to push boundaries and experiment with new techniques and styles. They prioritize individual voices and perspectives, allowing designers to express themselves authentically and connect with audiences on a personal level. 
-            </p>
-        </div>
-   
-        <img src="images/zine/1.png" width="100%" style="padding: 50px 300px; display: block;">
-
-
-            <!-- Zines, also known as fanzines or mini-mags, are self-published and self-distributed print publications that emerged in the late 1970s and early 1980s. They are usually created with a photocopier or other low-cost printing methods and are often produced in small quantities and distributed through mail networks, independent bookstores, and other alternative channels.-->
-            <p id="disclaimer" style="padding: 0px 0px 100px 0px;">A shallow dive in its pool</p>
-
-        <div class="portal" style="font-size: 1.5rem;">
-            
-
-            
-            <div style="position: relative; top: 0; left: -300px; z-index: -1; background-color: blue;">
-         
-                <img src="images/zine/eyes-wide.png" alt="eyes collage, background image"  height="100px">
-                <img src="images/zine/eyes-wide.png" alt="eyes collage, background image"  height="100px">
-                <img src="images/zine/eyes-wide.png" alt="eyes collage, background image"  height="100px">
-                <img src="images/zine/eyes-wide.png" alt="eyes collage, background image"  height="100px"> 
-                <img src="images/zine/eyes-wide.png" alt="eyes collage, background image"  height="100px">
-                <img src="images/zine/eyes-wide.png" alt="eyes collage, background image"  height="100px">
-               
-
-
-</div>
-                
-            
-                
-            <p style="text-align: justify; padding: 200px 00px 00px 400px; width: 60%;">
-                
-                Zines, also known as fanzines or mini-mags, are self-published and self-distributed print publications that emerged in the late 1970s and early 1980s.</p>
-            
-            <p style="text-align: justify; padding: 40px 0px 0px 0px; width: 60%;">Commonlly produced by marginalized or underground communities who wanted to create and distribute their own content outside of mainstream media channels</p>
-            <p style="text-align: justify; padding: 40px 400px 400px 0px; width: 60%;">Commonlly produced by marginalized or underground communities who wanted to create and distribute their own content outside of mainstream media channels</p>
+    .title {
+      color: #d73f28;
         
-        </div>
+      padding: 0 30px;
+      font-style: italic;
+      background-color: black;
+      display: inline;
+      opacity: 100%;
+    }
 
-     
+
+    /* trying menu with hover */
+
+
+    .list-style{
+        color: #aebf3f;
+      font-family: "alta-california", sans-serif;
+      font-weight: 400;
+      font-size: 5.5em;
+      /* font-style: normal;
+      text-align: left;
+
+      position: relative;
+      width: 200%;
+      left: 0px;
+      top: -120px;
+      z-index: -1; */
     
+    }
 
+    ul {
+        margin: auto;
+        /* padding: 200px; */
 
-        <!--  The idea of hand coding comes from an interrogation of the shift from physically programming, actively adjusting switches and weaving software where computer scientists were writing code for computers the size of rooms. It was meant to be understood by the computer not by the people who were making the programs. There is a reflection of this in the way we look at code currently, which is illegible jargon and often minified to become unreadable blobs of text. -->
       
-        <!-- So this brings me to the idea which will be the heart of this class. The handmade web. Olia Lialina, an internet artist and theorist writes in her Essay, Vernacular Web, that the web in the mid 90's for a lack of a better term was "bright, rich, slow, and under construction". It was created by early inhabitants of the internet, just learning how to create a space and make it their own. Olia refers to these inhabitants as "indigenous", amateur programmers just getting the lay of the land. She describes this as the amateur web and being a thing of the past, but describes the aesthetic that quickly was overridden by "dot.com ambitions, professional authoring tools and usability guidelines." This image is an example of a web page from geocities. That WTF level of weirdness was in no small part thanks to GeoCities, a web-hosting service that made it possible for people to build their own home pages. -->
-    
-        <!-- So this brings me to my next point. Was there a quality that the early web that was more genuine? The entrance into someone's personal home page felt like typing into the address bar was knocking on the front door and pressing enter was being let in to their foyer. And that's where we will begin our exploration of handmade web and see for our selves. But before we can style and make things look pretty, we have to learn how to structure and place text, images, notes, drawings, poems, etc. -->
-        <div class="portal" style="font-size: 1.5rem;">
-            <div style="background-color: beige; font-family: 'Inconsolata', monospace; color: black; font-size: 1rem; width: 60%; height: 80%; margin: auto;">
-                <p style="padding: 20%;"> hello world!</p>
-            </div>
-        </div>
-        <!-- Laurel Schwulst, wrote an essay called "My website is a shifting house next to a river of knowledge. What could yours be?" and it brought light to the potential of seeing a website as a metaphor. She speaks to a common response from people she has taught to make a website, that despite having the technical skills to code, the actual act of "creating a website" that would then be seen in the world, today. She says "There are endless possibilities as to what a website could be. What kind of room is a website? Or is a website more like a house? A boat? A cloud? A garden? A puddle? Whatever it is, there’s potential for a self-reflexive feedback loop: when you put energy into a website, in turn the website helps form your own identity."  -->
-        <div class="portal" style="font-size: 2rem; text-align: center;">
-            <p>There are endless possibilities as to what a website could be. What kind of room is a website? Or is a website more like a house? A boat? A cloud? A garden? A puddle? Whatever it is, there’s potential for a self-reflexive feedback loop: when you put energy into a website, in turn the website helps form your own identity.</p>
-            <img src="images/formidentity.gif" width="80%">
-        </div>
-        <!-- Alright, so now we embark on our journey. I will beging to give you the tools to start to build your own artifact to unleash into the cyberspace -->
-        <div class="portal" style="font-size: 2rem; text-align: center; padding-top: 200px;">
-            <img src="images/civilization.jpeg" width="100%">
-        </div>
-        <!-- She goes on to state how "we need individuals rather than corporations to guide the web’s future. The web is called the web because its vitality depends on just that—an interconnected web of individual nodes breathing life into a vast network. This web needs to actually work for people instead of being powered by a small handful of big corporations—like Facebook/Instagram, Twitter, and Google." -->
-        <div class="portal" style="font-size: 2rem; text-align: center; padding-top: 200px;">
-            <img src="images/netcompass.png" width="100%">
-        </div>
-        <!--But in order to start, we need to become acquainted with our computers and how information is stored and collected... So, What is a folder? -->
-        <div class="portal" style="font-size: 2rem; text-align: center; padding-top: 200px;">
-            <img src="images/whatisafolder.png" width="100%">
-        </div>
-        <!--What is a file? -->
-        <div class="portal" style="font-size: 2rem; text-align: center; padding-top: 200px;">
-            <img src="images/whatisafile.png" width="100%">
-        </div>
-        <!-- Now we know what folders and files are, we are ready to enter the land of hypertext! HTML stands for hypertext markup langauge and it is what is used to structure a web page. We will begin to structure our first web page together. But first, we must conjure up what we will use as our content. An exquisite corpse activity! We will take turns as a group to add a line of text. It can be weird and funky and nonsensical. All we are looking for are strings of writing so we can edit it in html. In the chat, we will add a line of text one by one popcorn style. I will edit a txt file with what we add. Then you can copy the text for yourself. ^_^ -->
-        <div class="portal" style="font-size: 2rem; text-align: center; padding-top: 200px;">
-            <img src="images/interconnected.png" width="100%">
-            <p><a href="https://miro.com/app/board/uXjVMQFDdWY=/?share_link_id=943948414570"> Let's go to our Miro Board</a> start by getting together with two buddies to work on our Equisite Corpse.</p>
-        </div>
-        <!-- This portion of the class is a workshop created by Emma Rae Bruml norton and can be seen at: https://designforthe.net/workshops/handmade-web/index.html -->
 
+    }
 
-<!--         
-        <div class="portal" style="font-size: 2rem; padding-top: 200px;">
-            <h1>Round 1</h1>
-            <p>Copy and paste the story and pick a typeface using the <a href="https://docs.google.com/document/d/1woYAbV9a6XFtPqzxPVO-d6Q4VwKJ4Cw0EeKsLmUzXLA/edit?usp=sharing">html cheat sheet</a></p>
-            <p>Create a header and format text size, font-style, and margin width.</p>
-        </div>
-        <div class="portal" style="font-size: 2rem; padding-top: 200px;">
-            <h1>Round 2</h1>
-            <p>Respond to the story by adding three links. You can start by exploring the handmade web channel in Ali's <a href="https://www.are.na/ali-rbjfgk7m_gc">Are.na looking at some imagery, gif, or links. You can traverse through links and images that you find interesting and place them in the code. </a></p>
-            <p>Edit the color of the text and background. Think about a color that resonates with the subject matter and tone.</p>
-        </div>
-        <div class="portal" style="font-size: 2rem; padding-top: 200px;">
-            <h1>Round 3</h1>
-            <p>Find quotes that resonate with the story and place them on an appropriate part of the page.</a></p>
-            <p>Add orientation and extra style.</p>
-        </div> -->
+    .menu-item {
+        /* height: 300px; */
+        display: flex;
+        align-items: center;
 
+        /* 
+        justify-content: center; */
+        position: relative;
+        left: -50px;
 
-
-
-
-     
+        padding: 100px 0;
+        width: 100%;
+        animation-play-state: paused;
+        
 
        
-    
-    </section>
-</body>
 
+
+			
+			
+			cursor: pointer;
+		}
+		.menu-item img {
+            transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+            opacity: 50%;
+
+          
+
+		
+
+            /* display: none; */
+			position: absolute;
+            /* top: 50%; */
+			
+            z-index: -3;
+
+
+			width: 100%;
+			height: 50%;
+            left: 60px;
+
+
+            object-fit: cover;
+			object-position: center; 
+			/* */
+			border-radius: 10px;
+      
+
+
+            transform: scale(0.9);
+      filter: saturate(10%);
+		}
+
+    
+        
+		.menu-item:hover img {
+            
+
+            height: 100%;
+            opacity: 100%;
+            object-fit: none;
+
+       
+			object-position: none; 
+
+
+
+            position: absolute;
+			/* display: block; */
+            transform: scale(1);
+      filter: saturate(150%);
+		}
+
+
+
+  </style>
+  <!-- WE CAN USE THIS IN SOME Part for text callout  -->
+  <!-- <h1 id="title">Independent, Bold, Experimental</h1>
+        <p class="text-experiment">What is it about??</p>  -->
+
+  <body>
+    <section>
+      <div style="padding-top: 200px">
+        <h1>Zines & the Web: From Photocopiers to Cat Videos</h1>
+        <p>
+          Zines often use creative layouts, unusual typography, and expressive
+          illustrations that can inspire designers to push boundaries and
+          experiment with new techniques and styles. They prioritize individual
+          voices and perspectives, allowing designers to express themselves
+          authentically and connect with audiences on a personal level.
+        </p>
+      </div>
+
+      <img
+        src="images/zine/1.png"
+        width="100%"
+        style="position: relative; padding: 150px 0; left: 200px"
+      />
+
+      <!-- Zines, also known as fanzines or mini-mags, are self-published and self-distributed print publications that emerged in the late 1970s and early 1980s. They are usually created with a photocopier or other low-cost printing methods and are often produced in small quantities and distributed through mail networks, independent bookstores, and other alternative channels.-->
+      <p id="disclaimer" style="padding: 60px 0px 100px 0px">
+        A shallow dive in its pool
+      </p>
+
+      <div class="" style="font-size: 1.5rem; position: relative; top: -200px">
+        <div>
+          <div
+            style="
+              position: relative;
+              top: 300px;
+              left: -370px;
+              z-index: -1;
+              background-color: rgb(40, 40, 43);
+              width: 190%;
+              opacity: 70%;
+            "
+          >
+            <img
+              src="images/zine/eyes-wide.png"
+              alt="eyes collage, background image"
+              height="10%"
+            />
+            <img
+              src="images/zine/eyes-wide.png"
+              alt="eyes collage, background image"
+              height="10%"
+            />
+            <img
+              src="images/zine/eyes-wide.png"
+              alt="eyes collage, background image"
+              height="10%"
+            />
+            <img
+              src="images/zine/eyes-wide.png"
+              alt="eyes collage, background image"
+              height="10%"
+            />
+            <img
+              src="images/zine/eyes-wide.png"
+              alt="eyes collage, background image"
+              height="10%"
+            />
+            <img
+              src="images/zine/eyes-wide.png"
+              alt="eyes collage, background image"
+              height="10%"
+            />
+            <img
+              src="images/zine/eyes-wide.png"
+              alt="eyes collage, background image"
+              height="10%"
+            />
+            <img
+              src="images/zine/eyes-wide.png"
+              alt="eyes collage, background image"
+              height="10%"
+            />
+            <img
+              src="images/zine/eyes-wide.png"
+              alt="eyes collage, background image"
+              height="10%"
+            />
+            <img
+              src="images/zine/eyes-wide.png"
+              alt="eyes collage, background image"
+              height="10%"
+            />
+          </div>
+
+          <p style="text-align: justify; width: 75%; position: relative">
+            Zines, also known as fanzines or mini-mags, are self-published and
+            self-distributed print publications that emerged in the late 1970s
+            and early 1980s.
+          </p>
+
+          <p style="text-align: justify; width: 75%; position: relative">
+            They are usually created with a photocopier or other low-cost
+            printing methods and are often produced in small quantities and
+            distributed through mail networks, independent bookstores, and other
+            alternative channels.
+          </p>
+          <p style="text-align: justify; width: 75%; position: relative">
+            Commonlly produced by marginalized or underground communities who
+            wanted to create and distribute their own content outside of
+            mainstream media channels
+          </p>
+        </div>
+      </div>
+      <h1 class="title">Independent, Bold, Experimental</h1>
+      <p class="text-experiment">Background & History</p>
+
+      <!-- Punk zines covered a wide range of topics, including music, politics, fashion, and DIY culture, and were often produced by young people who had little experience with traditional publishing methods. Many zines included reviews and interviews with punk bands, and helped to spread the word about new and emerging artists. By providing an alternative to mainstream media coverage, punk zines helped to support a vibrant and diverse underground music scene."  -->
+      <div class="" style="font-size: 1.5rem; padding: 80px 0 80px">
+        <a
+          href="https://webflow.com/graphic-design-archive/punk-publishing"
+          class="clickable"
+        >
+          <img
+            src="images/zine/punk-0.png"
+            alt="header for punk section of zine presentation, can be found in webflow link on references section"
+            style="
+              margin: auto;
+              position: relative;
+              left: 0;
+              padding: 50px 200px;
+            "
+            height="30%"
+            ;
+            width="100%"
+          />
+        </a>
+
+        <img
+          src="images/zine/punk1-Jason Rosewell.png"
+          alt="image by Jason Roswell"
+          width="100%"
+          style="position: relative; left: -200px"
+        />
+
+        <img
+          src="images/zine/punk2-.png"
+          alt="image by Jason Roswell"
+          width="49%"
+          style="padding: 10%"
+        />
+        <img
+          src="images/zine/punk3.png"
+          alt="image by Jason Roswell"
+          width="29%"
+        />
+      </div>
+
+      <div style="text-align: center;">
+        <p style="font-size: 1.5rem; text-align: justify; padding-bottom: 100px;">
+          Zines became popular in the punk and counterculture scenes of the
+          1970s and 1980s, and have since spread to encompass a wide range of
+          genres and subcultures.
+        </p>
+        <img src="images/zine/punnk4.png" width="80%" />
+      </div>
+
+      <!-- Experimental web starts here -->
+
+      <div
+        class="portal animatedBG"
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #aebf3f;
+          height: 500px;
+          width: 500px;
+          margin: 250px;
+        "
+      >
+        <p class="" id="disclaimer" style="text-align: center; color: aliceblue;">
+          Webzines and The Experimental Web
+        </p>
+      </div>
+      <!-- Alright, so now we embark on our journey. I will beging to give you the tools to start to build your own artifact to unleash into the cyberspace -->
+      <div
+        class="portal"
+        style="font-size: 2rem; text-align: center; padding-top: 200px"
+      >
+        <a href="http://www.royse.land/"
+          ><img class="clickable" src="images/zine/web1.png" width="100%" />
+        </a>
+      </div>
+
+      <!-- In addition to their aesthetic influence, zines also inspired early web designers in terms of their DIY ethos and their focus on community building and self-expression. Many early web designers saw the web as a new platform for creative expression and community building, and they drew on the same sense of independence and experimentation that characterized the zine culture of the time. -->
+
+      <div class="portal" style="font-size: 1.5rem">
+        <p id="disclaimer" style="padding: 0px 0px 100px 0px">
+          the handmade web
+        </p>
+        <p style="text-align: right; padding: 200px 0px 200px 0px">
+          In the early days of the web, there was a strong sense of
+          experimentation and creativity as designers and developers worked to
+          create new and innovative ways to present information online.
+        </p>
+      </div>
+      <!--  The idea of hand coding comes from an interrogation of the shift from physically programming, actively adjusting switches and weaving software where computer scientists were writing code for computers the size of rooms. It was meant to be understood by the computer not by the people who were making the programs. There is a reflection of this in the way we look at code currently, which is illegible jargon and often minified to become unreadable blobs of text. -->
+      <div class="portal" style="font-size: 1.5rem">
+        <img src="../week1/images/wires.png" width="100%" />
+      </div>
+      <!-- So this brings me to the idea which will be the heart of this class. The handmade web. Olia Lialina, an internet artist and theorist writes in her Essay, Vernacular Web, that the web in the mid 90's for a lack of a better term was "bright, rich, slow, and under construction". It was created by early inhabitants of the internet, just learning how to create a space and make it their own. Olia refers to these inhabitants as "indigenous", amateur programmers just getting the lay of the land. She describes this as the amateur web and being a thing of the past, but describes the aesthetic that quickly was overridden by "dot.com ambitions, professional authoring tools and usability guidelines." 
+            
+            This image is an example from a class I took in 2019, it's a quirky way to show how scrap web can be used as political satire -->
+      <div class="portal clickable" style="font-size: 1.5rem">
+        <a href="https://jottamenezes.github.io/des157-g/studio3/index.html">
+          <img src="images/zine/web2.png" width="100%" />
+        </a>
+      </div>
+      <div class="portal" style="font-size: 1.5rem">
+        <iframe
+          src="https://pavellaptev.github.io/web-dark-ages/"
+          title=""
+          width="100%"
+          height="80%"
+        ></iframe>
+      </div>
+      <!-- So this brings me to my next point. Was there a quality that the early web that was more genuine? The entrance into someone's personal home page felt like typing into the address bar was knocking on the front door and pressing enter was being let in to their foyer. And that's where we will begin our exploration of handmade web and see for our selves. But before we can style and make things look pretty, we have to learn how to structure and place text, images, notes, drawings, poems, etc. -->
+      <div class="portal" style="font-size: 1.5rem">
+        <div
+          style="
+            background-color: beige;
+            font-family: 'Inconsolata', monospace;
+            color: black;
+            font-size: 1rem;
+            width: 60%;
+            height: 80%;
+            margin: auto;
+          "
+        >
+          <p style="padding: 20%">hello world!</p>
+        </div>
+      </div>
+      <!-- Laurel Schwulst, wrote an essay called "My website is a shifting house next to a river of knowledge. What could yours be?" and it brought light to the potential of seeing a website as a metaphor. She speaks to a common response from people she has taught to make a website, that despite having the technical skills to code, the actual act of "creating a website" that would then be seen in the world, today. She says "There are endless possibilities as to what a website could be. What kind of room is a website? Or is a website more like a house? A boat? A cloud? A garden? A puddle? Whatever it is, there’s potential for a self-reflexive feedback loop: when you put energy into a website, in turn the website helps form your own identity."  -->
+      <div class="portal" style="font-size: 2rem; text-align: center">
+        <p>
+          There are endless possibilities as to what a website could be. What
+          kind of room is a website? Or is a website more like a house? A boat?
+          A cloud? A garden? A puddle? Whatever it is, there’s potential for a  
+          self-reflexive feedback loop: when you put energy into a website, in
+          turn the website helps form your own identity.
+        </p>
+        <img src="../week1/images/formidentity.gif" width="80%" />
+      </div>
+
+    
+        <h1 class="title">TLDR Key Takeaways</h1>
+
+        <ul>
+          <li class="menu-item list-style">Do it Y<img src="images/zine/diy.gif" alt="test with hover link to show image"></li>
+          <li class="menu-item list-style">Grassroots<img src="images/zine/grassroots.gif" alt="test with hover link to show image"></li>
+          <li class="menu-item list-style">Political<img src="images/zine/political.gif" alt="test with hover link to show image"></li>
+          <li class="menu-item list-style">Layout<img src="images/zine/layout.gif" alt="test with hover link to show image"></li>
+          <li class="menu-item list-style">Typography<img src="images/zine/typography.gif" alt="test with hover link to show image"></li>
+          <li class="menu-item list-style">Color<img src="images/zine/color.gif" alt="test with hover link to show image"></li>
+          <li><p>All Images from this <a href="https://www.are.na/ali-rbjfgk7m_gc/kinetic-typography-7tjcbvj4lxk">are.na channel </a>  </p></li>
+
+
+       
+          <!-- <li class="menu-item"><p class="text-experiment ">Grassroots</p><img src="images/zine/eyes-wide.png" alt="test with hover link to show image"></li>
+          <li class="menu-item"><p class="text-experiment ">Expressive</p><img src="images/zine/eyes-wide.png" alt="test with hover link to show image"></li>
+
+          <li class="menu-item"><p class="text-experiment ">Layout</p><img src="images/zine/eyes-wide.png" alt="test with hover link to show image"></li>
+          <li class="menu-item"><p class="text-experiment ">Typograophy</p><img src="images/zine/eyes-wide.png" alt="test with hover link to show image"></li>
+          <li class="menu-item"><p class="text-experiment ">Color</p><img src="images/zine/eyes-wide.png" alt="test with hover link to show image"></li> -->
+
+
+
+
+
+        </ul>
+
+        <!-- <p class="text-experiment" ;>
+          DIY Graassroots Layout Typography Color Political DIY Graassroots
+          Layout Typography Color Politicals
+        </p> -->
+    
+
+      <div
+        class="portal"
+        style="font-size: 2rem; text-align: center; padding-top: 200px"
+      >
+        <img src="images/interconnected.png" width="100%" />
+        <p>
+          <a
+            href="https://miro.com/app/board/uXjVMQFDdWY=/?share_link_id=943948414570"
+          >
+            Let's go to our Miro Board</a
+          >
+          start by getting together with two buddies to work on our Equisite
+          Corpse.
+        </p>
+      </div>
+    </section>
+  </body>
 </html>
