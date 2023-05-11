@@ -1,0 +1,172 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout: Digital Gardening</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<style>
+    @font-face {
+        font-family: "Neue Machina Regular";
+        src: url("../fonts/NeueMachina-Regular.woff2") format("woff2"),
+            url("../fonts/NeueMachina-Regular.woff") format("woff");
+    }
+
+    @font-face {
+    font-family: "Neue Machina Light";
+    src: url("../fonts/NeueMachina-Light.woff2") format("woff2"),
+        url("../fonts/NeueMachina-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Neue Machina Ultralight";
+    src: url("../fonts/NeueMachina-Ultralight.woff2") format("woff2"),
+        url("../fonts/NeueMachina-Ultralight.woff") format("woff");
+}
+    body {
+        background-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        color: aliceblue;
+        font-size: 1.5rem;
+       
+    }
+
+    p {
+
+        line-height: 160%;
+    }
+
+    section {
+        width: 60%;
+        margin: auto;
+    }
+
+   
+a{
+    color: #d73f28;
+}
+
+a:hover{
+    color:bisque;
+}
+
+
+    h1{
+        font-family: 'Neue Machina Regular', monospace;
+        font-size: 4.5rem;
+    }
+
+    code {
+        background-color: white;
+        color: black;
+        border-radius: 0.3rem;
+        padding: 4px 5px 5px;
+        white-space: nowrap;
+    }
+    .portal {
+        height: 120%;
+        /* padding: 20% 0; */
+        
+    }
+
+    .disclaimer {
+
+color:#d73f28;
+font-family: Neue Machina Ultralight;
+font-style:normal;
+font-size:1em;
+margin: auto; 
+padding: 300px 16px 0px;
+
+text-decoration: underline;
+  text-decoration-skip-ink: auto;
+  text-underline-offset: 2em;
+
+}
+
+</style>
+
+<body>
+      <!-- This talk as HTML comments was inspired by Mindy Seu's lecture on the Cyberfeminism Index at https://mindyseu.com/sharing/. Which was inspired by a lecture given by Emma Rae Norton or Melanie Hoff's SFPC course Digital Love Languages. View Emma's Lecture here: https://doodybrains.github.io/hand-coding-round-robin/dll-july-2020-with-melanie/thinking.html -->
+
+    <section>
+        <div class="portal" style="padding-top:200px;">
+            <h1>CSS Layout: Digital Gardening</h1>
+            <img src="images/growyourgarden.jpeg" width=50%">
+        </div>
+   
+        <div class="" style="font-size: 4rem;">
+            <p><em>"A garden is a collection of evolving ideas that aren't strictly organised by their publication date. <span class="disclaimer"> They're inherently exploratory – notes are linked through contextual associations.</span> They aren't refined or complete - notes are published as half-finished thoughts that will grow and evolve over time. They're less rigid, less performative, and less perfect than the personal websites we're used to seeing." - Maggie Appleton </em></p>
+        </div>
+        
+      
+
+        <div class="" style="font-size: 4rem;">
+            <h2 class="disclaimer">A brief History of Digital Gardens</h2>
+            <p> Mark Bernstein's 1998 essay, <a href="http://www.eastgate.com/garden/Enter.html">Hypertext Gardens</a> appears to be the first recorded mention of the term.</p>
+        </div>
+        <div class="portal" style="font-size: 4rem;">
+            <p>To early web inhabitants, their idea of the web was that is was very much like a labyrinth that was tended by <a href="https://wiki.c2.com/?WikiGardener">WikiGardeners</a> and <a href="https://wiki.c2.com/?WikiGnome">WikiGnomes</a>. They wanted to create a pick-your-own path experience.</p>
+        </div>
+
+        <!-- Labyrinths (1962) is a collection of short stories and essays by Jorge Luis Borges.It includes "Tlön, Uqbar, Orbis Tertius", "The Garden of Forking Paths", and "The Library of Babel", three of Borges' most famous stories.Many of the stories are from the collections Ficciones (1944) and El Aleph (1949). -->
+        
+        <div class="portal" style="font-size: 4rem;">
+            <div style="display: flex; width: 80%; height: 60%; margin: auto;">
+                <a href="https://www.are.na/block/11564858"><img title="Labyrinths by Jorge Luis Borges" src="images/labyrinths.png" height="100%"></a>
+                <img src="images/labyrinth-art.jpeg" title="Labyrinth. Rabanus Maurus: De rerum naturis, c. 1425, Pal. lat. 291, f. 170v, Vatican, Biblioteca Apostolica Vaticana," height="100%">
+            </div>
+        </div>
+        <div class="portal" style="font-size: 4rem;">
+            <p><em>The Navigation Problem</em> - the issue of how to give web users just enough guidance to freely explore the web, without forcing them into pre-defined browsing experiences. The eternal struggle to find the right balance of chaos and structure.</p>
+        </div>
+        <!-- Maggie appleton writes, "If anyone should be considered the original source of digital gardening, it's Caufield." They are the first to lay out this whole idea in poetic, coherent words. -->
+        <div class="" style="font-size: 4rem;">
+            <p>"It's <em><strong> different way of thinking about our online behaviour around information</strong></em> - one that accumulates personal knowledge over time in an explorable space" <a class="disclaimer" href="https://hapgood.us/2015/10/17/the-garden-and-the-stream-a-technopastoral/"> Read more by Mike Caufield and his main argument that we have become swept away by streams</a>
+            </p>
+        </div>
+
+        <!-- A graph to celebrate what Maggie Appleton is talking about in her 'Digital Garden' thread on Twitter. -->
+        <div class="portal" style="font-size: 4rem; padding-top: 300px;">
+            <img title="A graph to celebrate what Maggie Appleton is talking about in her 'Digital Garden' thread on Twitter." src="images/qualitiesofadigitalgarden.jpeg" width="100%" >
+        </div>
+
+        <div class="portal" style="font-size: 4rem;">
+            <a style="padding: 00px  300px;"  href="http://www.digitalgarden.nu/">A beautiful Digital Garden</a> 
+            <p class="disclaimer"></p>
+            <a style="padding: 0 600px;" href="https://kiaraputrilia.github.io/Core-2-Studio/A4/index.html">Another Digital Garden</a>
+        </div>
+
+
+
+        <div class="portal" style="font-size: 4rem;">
+            <img src="images/garden-labyrith-pc.jpeg" width="100%">
+        </div>
+
+        <div class="" style="font-size: 4rem;">
+            <p class="disclaimer">what can live in a digital garden?</a></p>
+        </div>
+        <!-- <div class="portal" style="font-size: 4rem;">
+            <img src="images/garden-labyrith.jpeg" width="100%">
+        </div> -->
+
+        <div class="portal" style="padding-top: 300px; font-size: 4rem;">
+            <img src="images/network-gardens.png" width="100%">
+            <p> Lets make our own digital gardens: <a href="garden-code-snippets.zip">download this example code to start</a></p>
+            <p style="font-size: 2rem; line-height: 3rem;">Start to build out our garden plots, style, add images, links, text. Use <code>alt</code> and <code>title</code> to add text to images when you hover. You can also make separate divs that have display properties that start from <code>display:none</code> and on a selector with a <code>:hover</code> psudo-selector, to <code>display: block</code> and use positioning properties to position the div where you want it to show up</p>
+        </div>
+
+        <div class="portal" style="font-size: 4rem;">
+            <p> <code>alt</code> text is for an alternative representation of an image. <code>title </code>text is for tooltips.</p>
+        </div>
+
+       
+
+    </section>
+</body>
+
+</html>
