@@ -12,254 +12,256 @@
     />
     <link rel="stylesheet" href="https://use.typekit.net/dsr1mvb.css" />
     <link rel="stylesheet" href="https://use.typekit.net/dsr1mvb.css" />
-  </head>
-  <style>
-    @font-face {
-      font-family: "Neue Machina Regular";
-      src: url("../fonts/NeueMachina-Regular.woff2") format("woff2"),
-        url("../fonts/NeueMachina-Regular.woff") format("woff");
-    }
-
-    body {
-      background-color: black;
-      font-family: Arial, Helvetica, sans-serif;
-      color: aliceblue;
-      font-size: 1.5rem;
-
-      overflow-x: hidden; /* Hide horizontal scrollbar */
-      overflow-y: auto; /* Allow vertical scrollbar */
-    }
-
-    .animatedBG {
-      background-color: #1abc9c;
-      animation-name: gradient;
-      animation-duration: 15s;
-      animation-iteration-count: infinite;
-
-
-    }
-
-    @keyframes gradient {
-      0% {
-        background-image: linear-gradient(to right, #1abc9c, #2ecc71);
+    <style>
+      @font-face {
+        font-family: "Neue Machina Regular";
+        src: url("../fonts/NeueMachina-Regular.woff2") format("woff2"),
+          url("../fonts/NeueMachina-Regular.woff") format("woff");
       }
-      50% {
-        background-image: linear-gradient(to right, #2ecc71, #3498db);
+  
+      body {
+        background-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        color: aliceblue;
+        font-size: 1.5rem;
+  
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+        overflow-y: auto; /* Allow vertical scrollbar */
       }
-      100% {
-        background-image: linear-gradient(to right, #3498db, #9b59b6);
+  
+      .animatedBG {
+        background-color: #1abc9c;
+        animation-name: gradient;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+  
+  
       }
-    }
-    
-    h2{
-   margin: 80px 20ps 40px;
-   padding: 0 20px;
-    font-size: 3rem;
-    line-height: 120%;
-
-}
-
-    p {
-      font-size: 1.5rem;
-      /* padding-top: 30px; */
-      font-family: helvetica, sans-serif;
-      font-weight: lighter;
-
-      width: 90%;
-      margin: auto;
-      text-align: justify;
-      line-height: 140%;
-      padding: 10px 0 20px;
-    }
-
-    section {
-      width: 60%;
-      margin: auto;
-    }
-    ul{
-    font-family: Arial, Helvetica, sans-serif;
-    font-family: Neue Machina Light;
-    font-size:.8em;
-    width: 70%;
-    margin: auto;
-    text-align: left;
-    padding-bottom: 15px;
-
-}
-
-li{
-    list-style:circle;
-    line-height: 160%;
-    padding-bottom: 10px;
-}
-
-a{
-    color: #d73f28;
-}
-
-a:hover{
-    color:bisque;
-}
-
-    .clickable {
-      display: flex;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-      transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
-      transform: scale(0.9);
-      filter: saturate(10%);
-    }
-
-    .clickable:hover {
-      transform: scale(1);
-      filter: saturate(150%);
-    }
-    h1 {
-      font-family: "Neue Machina Regular", monospace;
-    }
-
-    .portal {
-      height: 100%;
-    }
-
-    #disclaimer {
-      color: #d73f28;
-      font-family: Neue Machina Ultralight;
-      font-style: normal;
-      font-size: 1em;
-      margin: auto;
-      padding: 8px 16px 0px;
-    }
-
-    .text-experiment {
-      color: #aebf3f;
-      font-family: "alta-california", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      text-align: left;
-      font-size: 5.5em;
-      position: relative;
-      width: 200%;
-      left: 0px;
-      top: -120px;
-      z-index: -1;
-    }
-
-    .title {
-      color: #d73f28;
-        
-      padding: 0 30px;
-      font-style: italic;
-      background-color: black;
-      display: inline;
-      opacity: 100%;
-    }
-
-
-    /* trying menu with hover */
-
-
-    .list-style{
-        color: #aebf3f;
-      font-family: "alta-california", sans-serif;
-      font-weight: 400;
-      /* font-size: 5.5em; */
-      /* font-style: normal;
-      text-align: left;
-
-      position: relative;
-      width: 200%;
-      left: 0px;
-      top: -120px;
-      z-index: -1; */
-    
-    }
-
-    ul {
+  
+      @keyframes gradient {
+        0% {
+          background-image: linear-gradient(to right, #1abc9c, #2ecc71);
+        }
+        50% {
+          background-image: linear-gradient(to right, #2ecc71, #3498db);
+        }
+        100% {
+          background-image: linear-gradient(to right, #3498db, #9b59b6);
+        }
+      }
+      
+      h2{
+     margin: 80px 20ps 40px;
+     padding: 0 20px;
+      font-size: 3rem;
+      line-height: 120%;
+  
+  }
+  
+      p {
+        font-size: 1.5rem;
+        /* padding-top: 30px; */
+        font-family: helvetica, sans-serif;
+        font-weight: lighter;
+  
+        width: 90%;
         margin: auto;
-        /* padding: 200px; */
-
-      
-
-    }
-
-    .menu-item {
-        /* height: 300px; */
+        text-align: justify;
+        line-height: 140%;
+        padding: 10px 0 20px;
+      }
+  
+      section {
+        width: 60%;
+        margin: auto;
+      }
+      ul{
+      font-family: Arial, Helvetica, sans-serif;
+      font-family: Neue Machina Light;
+      font-size:.8em;
+      width: 70%;
+      margin: auto;
+      text-align: left;
+      padding-bottom: 15px;
+  
+  }
+  
+  li{
+      list-style:circle;
+      line-height: 160%;
+      padding-bottom: 10px;
+  }
+  
+  a{
+      color: #d73f28;
+  }
+  
+  a:hover{
+      color:bisque;
+  }
+  
+      .clickable {
         display: flex;
-        align-items: center;
-
-        /* 
-        justify-content: center; */
-        position: relative;
-        left: -50px;
-
-        padding: 100px 0;
         width: 100%;
-        animation-play-state: paused;
-        
-
-       
-
-
-			
-			
-			cursor: pointer;
-		}
-		.menu-item img {
-            transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
-            opacity: 50%;
-
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+        transform: scale(0.9);
+        filter: saturate(10%);
+      }
+  
+      .clickable:hover {
+        transform: scale(1);
+        filter: saturate(150%);
+      }
+      h1 {
+        font-family: "Neue Machina Regular", monospace;
+      }
+  
+      .portal {
+        height: 100%;
+      }
+  
+      #disclaimer {
+        color: #d73f28;
+        font-family: Neue Machina Ultralight;
+        font-style: normal;
+        font-size: 1em;
+        margin: auto;
+        padding: 8px 16px 0px;
+      }
+  
+      .text-experiment {
+        color: #aebf3f;
+        font-family: "alta-california", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: left;
+        font-size: 5.5em;
+        position: relative;
+        width: 200%;
+        left: 0px;
+        top: -120px;
+        z-index: -1;
+      }
+  
+      .title {
+        color: #d73f28;
           
-
-		
-
-            /* display: none; */
-			position: absolute;
-            /* top: 50%; */
-			
-            z-index: -3;
-
-
-			width: 100%;
-			height: 50%;
-            left: 60px;
-
-
-            object-fit: cover;
-			object-position: center; 
-			/* */
-			border-radius: 10px;
+        padding: 0 30px;
+        font-style: italic;
+        background-color: black;
+        display: inline;
+        opacity: 100%;
+      }
+  
+  
+      /* trying menu with hover */
+  
+  
+      .list-style{
+          color: #aebf3f;
+        font-family: "alta-california", sans-serif;
+        font-weight: 400;
+        /* font-size: 5.5em; */
+        /* font-style: normal;
+        text-align: left;
+  
+        position: relative;
+        width: 200%;
+        left: 0px;
+        top: -120px;
+        z-index: -1; */
       
-
-
-            transform: scale(0.9);
-      filter: saturate(10%);
-		}
-
-    
+      }
+  
+      ul {
+          margin: auto;
+          /* padding: 200px; */
+  
         
-		.menu-item:hover img {
+  
+      }
+  
+      .menu-item {
+          /* height: 300px; */
+          display: flex;
+          align-items: center;
+  
+          /* 
+          justify-content: center; */
+          position: relative;
+          left: -50px;
+  
+          padding: 100px 0;
+          width: 100%;
+          animation-play-state: paused;
+          
+  
+         
+  
+  
+        
+        
+        cursor: pointer;
+      }
+      .menu-item img {
+              transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+              opacity: 50%;
+  
             
+  
+      
+  
+              /* display: none; */
+        position: absolute;
+              /* top: 50%; */
+        
+              z-index: -3;
+  
+  
+        width: 100%;
+        height: 50%;
+              left: 60px;
+  
+  
+              object-fit: cover;
+        object-position: center; 
+        /* */
+        border-radius: 10px;
+        
+  
+  
+              transform: scale(0.9);
+        filter: saturate(10%);
+      }
+  
+      
+          
+      .menu-item:hover img {
+              
+  
+              height: 100%;
+              opacity: 100%;
+              object-fit: none;
+  
+         
+        object-position: none; 
+  
+  
+  
+              position: absolute;
+        /* display: block; */
+              transform: scale(1);
+        filter: saturate(150%);
+      }
+  
+  
+  
+    </style>
 
-            height: 100%;
-            opacity: 100%;
-            object-fit: none;
-
-       
-			object-position: none; 
-
-
-
-            position: absolute;
-			/* display: block; */
-            transform: scale(1);
-      filter: saturate(150%);
-		}
-
-
-
-  </style>
+  </head>
+ 
   <!-- WE CAN USE THIS IN SOME Part for text callout  -->
   <!-- <h1 id="title">Independent, Bold, Experimental</h1>
         <p class="text-experiment">What is it about??</p>  -->

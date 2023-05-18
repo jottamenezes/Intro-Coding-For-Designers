@@ -29,6 +29,7 @@
 }
 
 
+
 body{
     font-family: 'Neue Machina Regular', monospace;
     font-size: 1.5em;
@@ -37,6 +38,16 @@ body{
     color: #ffffff;
     background: #000000;
 }
+
+
+.content{
+    border: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+}
+
+
 section{
     width: 80%;
     margin: auto;
@@ -44,56 +55,87 @@ section{
     text-align: center;
     margin-top: 5%
 }
+
+
 p{
-    padding-top: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    /* padding-top: 30px; */
+    font-family: helvetica, sans-serif;
+    font-weight: lighter;
     width: 70%;
     margin: auto;
     text-align: justify;
+    line-height: 160%;
+    padding: 10px 0 20px;
 }
 
+#disclaimer {
+
+    color:#d73f28;
+    font-family: Neue Machina Ultralight;
+    font-size:1em;
+    margin: auto; 
+    padding: 8px 16px 0px;
+}
+
+
 h1{
+    margin: 80px 20px 40px;
     padding-top: 10%; 
-    font-size: 5rem
+   
+    font-size: 5rem;
+    line-height: 100%;
 }
 
 h2{
-    padding-top: 10%; 
-    font-size: 3rem
+   margin: 80px 20ps 40px;
+   padding: 0 20px;
+    font-size: 3rem;
+    line-height: 120%;
+
 }
 
 h3{
     padding-top: 2.5%; 
-    font-size: 2rem
+    font-size: 2rem;
 }
 ul{
     font-family: Arial, Helvetica, sans-serif;
+    font-family: Neue Machina Light;
+    font-size:1em;
     width: 70%;
-    font-size: 1.5rem;
-    font-style: italic;
-    font-weight: 100;
     margin: auto;
     text-align: left;
+    padding-bottom: 15px;
+
 }
+
 li{
     list-style:circle;
+    line-height: 160%;
+    padding-bottom: 10px;
 }
 
 a{
-    color: #ffffff;
+    color: #d73f28;
 }
 
 a:hover{
-    color: aqua;
+    color:bisque;
 }
 
-code {
-    background-color: white;
-    color: black;
-    border-radius: 0.3rem;
-    padding: 4px 5px 5px;
-    white-space: nowrap;
+#disclaimer {
+
+    color:#d73f28;
+    font-family: Neue Machina Ultralight;
+    font-size:1em;
+    margin: auto; 
+    padding: 8px 16px 0px;
 }
+
+.portal {
+    height: 100%;
+}
+
 
 @media (max-width: 700px){
     body{
