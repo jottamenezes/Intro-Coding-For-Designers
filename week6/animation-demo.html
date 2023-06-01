@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Animation Example</title>
+  
+  <style>
+    /* Define the animation */
+    @keyframes slide-in {
+      0% { opacity: 0; transform: translateX(-100%); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+    
+    /* Apply the animation to an element */
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: rgb(52, 71, 195);
+      animation-name: slide-in;
+      animation-duration: 2s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: both;
+      animation-iteration-count:infinite;
+
+      
+    }
+    
+    /* Define another animation */
+    @keyframes fade-in {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    
+    /* Apply the animation to another element */
+    .text {
+      font-size: 24px;
+      background-color: rgb(52, 71, 195);
+      animation-name: fade-in;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    
+    /* Define a scaling animation */
+    @keyframes scale {
+      0% { transform: scale(1);      border-radius: 0%;         background-color: rgb(52, 71, 195);
+
+}
+      50% { transform: scale(1.2);      border-radius: 10%;    background-color: rgb(52, 164, 195);
+ }
+      100% { transform: scale(1);       border-radius: 50%;      
+
+}
+    }
+    
+    /* Apply the scaling animation on click */
+    .scale {
+
+      animation-name: scale;
+      animation-duration: 2s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction:alternate;
+      border-radius: 50%;
+
+    }
+
+
+
+
+
+    /* Page styling */
+
+    @font-face {
+        font-family: "Neue Machina Regular";
+        src: url("../fonts/NeueMachina-Regular.woff2") format("woff2"),
+            url("../fonts/NeueMachina-Regular.woff") format("woff");
+    }
+
+    body {
+        background-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        color: aliceblue;
+        font-size: 2rem;
+    }
+
+    section {
+        width: 60%;
+        margin: auto;
+    }
+
+    a {
+        color: aliceblue;
+    }
+
+    a:visited {
+        color: aliceblue;
+    }
+
+    h1 {
+        font-family: 'Neue Machina Regular', monospace;
+    }
+
+    .portal {
+        height: 100%;
+    }
+
+    code {
+        background-color: white;
+        color: black;
+        border-radius: 0.3rem;
+        padding: 4px 5px 5px;
+        white-space: nowrap;
+    }
+
+    #text {
+        width: 100%;
+        padding: 20px;
+        margin-top: 50px;
+        border: none;
+        outline:none;
+        font-size: 4rem;
+    }
+    #text:active{
+        border: none;
+        outline:none;
+    }
+
+    #submit{
+        width: 100%;
+        padding: 20px;
+        margin-top: 50px;
+        font-size: 4rem;
+    }
+
+    #btn{
+        width: 100%;
+        padding: 20px;
+        margin-top: 50px;
+        font-size: 4rem;
+    }
+
+    .radio{
+        width: 50px;
+        height: 50px;
+    }
+    .checkbox{
+        width: 50px;
+        height: 50px;
+    }
+
+    #hover-div{
+        background-color: blue;
+        width: 100%;
+        height: 400px;
+    }
+    #hover-div:hover{
+        background-color: magenta;
+        width: 100%;
+        height: 400px;
+    }
+
+    article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10%;
+    }
+
+
+  </style>
+</head>
+<body>
+    <article>
+  <!-- Example 1: Slide-in Animation -->
+  <h2>Example 1: Slide-in Animation</h2>
+  <div class="box"></div>
+</article>
+  
+  <!-- Example 2: Fade-in Animation -->
+<article>
+  <h2>Example 2: Fade-in Animation</h2>
+  <p class="text">Hello, CSS Animations!</p>
+</article>
+  
+  <!-- Example 3: Scaling Animation -->
+<article>
+  <h2>Example 3: Scaling Animation</h2>
+  <div class="box scale"></div>
+</article>
+</body>
+</html>
+
