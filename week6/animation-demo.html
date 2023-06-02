@@ -6,8 +6,18 @@
   <style>
     /* Define the animation */
     @keyframes slide-in {
-      0% { opacity: 0; transform: translateX(-100%); }
-      100% { opacity: 1; transform: translateX(0); }
+      0% { opacity: 0; transform: translateX(-100%);
+        letter-spacing: 0;
+      
+      }
+      100% { opacity: 1; transform: translateX(0);
+
+        letter-spacing: 50px;
+       }
+    }
+
+    p {
+      animation-name: slide-in;
     }
     
     /* Apply the animation to an element */
@@ -18,14 +28,19 @@
       animation-name: slide-in;
       animation-duration: 2s;
       animation-timing-function: ease-in-out;
-      animation-fill-mode: both;
+      animation-fill-mode:both;
       animation-iteration-count:infinite;
 
       
     }
     
+    .box:hover {
+      animation-play-state: paused;
+    }
+
     /* Define another animation */
     @keyframes fade-in {
+      
       0% { opacity: 0; }
       100% { opacity: 1; }
     }
@@ -38,6 +53,7 @@
       animation-duration: 1s;
       animation-timing-function: linear;
       animation-delay: 2s;
+      animation-delay: 0.5s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
     }
@@ -63,6 +79,8 @@
       animation-iteration-count: infinite;
       animation-direction:alternate;
       border-radius: 50%;
+      animation-delay: 1s;
+
 
     }
 
@@ -176,7 +194,9 @@
     <article>
   <!-- Example 1: Slide-in Animation -->
   <h2>Example 1: Slide-in Animation</h2>
-  <div class="box"></div>
+  <div class="box">
+    <p>Box 1</p>
+  </div>
 </article>
   
   <!-- Example 2: Fade-in Animation -->
